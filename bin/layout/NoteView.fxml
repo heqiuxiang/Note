@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox prefHeight="705.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.NoteView">
+   <children>
+      <fx:include fx:id="allbookview" source="AllBookView.fxml" />
+      <VBox prefHeight="705.0" prefWidth="740.0">
+         <children>
+            <VBox prefHeight="161.0" prefWidth="740.0">
+               <children>
+                  <AnchorPane prefHeight="31.0" prefWidth="740.0">
+                     <children>
+                        <Button fx:id="deleteButton" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#deleteButtonPressAction" prefHeight="36.0" prefWidth="65.0" text="delete" />
+                        <TextField fx:id="remindTimeText" layoutX="211.0" layoutY="8.0" prefHeight="36.0" prefWidth="94.0" />
+                        <Button fx:id="doneButton" layoutX="669.0" layoutY="8.0" mnemonicParsing="false" onAction="#doneButtonPressAction" prefHeight="36.0" prefWidth="57.0" text="done" />
+                        <Button fx:id="remindButton" layoutX="139.0" layoutY="9.0" mnemonicParsing="false" onAction="#remindButtonPressAction" prefHeight="36.0" prefWidth="72.0" text="remind" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="54.0" prefWidth="740.0">
+                     <children>
+                        <TextField fx:id="titleText" layoutX="13.0" layoutY="19.0" prefHeight="42.0" prefWidth="714.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="46.0" prefWidth="740.0">
+                     <children>
+                        <Button fx:id="labelButton" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#labelButtonPressAction" prefHeight="30.0" prefWidth="65.0" text="label" />
+                        <Label fx:id="labelText" layoutX="89.0" layoutY="22.0" prefHeight="20.0" prefWidth="326.0" />
+                        <ChoiceBox fx:id="noteBookChooser" layoutX="576.0" layoutY="16.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="576.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="16.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <fx:include fx:id="editorview" source="EditorView.fxml" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

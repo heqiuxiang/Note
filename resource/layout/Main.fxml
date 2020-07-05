@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="1112.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainView">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="importMenuItem" mnemonicParsing="false" text="import" onAction="#importButtonPressAction"/>
+              <MenuItem fx:id="exportMenuItem" mnemonicParsing="false" text="export" onAction="#exportButtonPressAction"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="newMenuItem" mnemonicParsing="false" text="new" onAction="#newButtonPressAction"/>
+              <MenuItem fx:id="noteBookMenuItem" mnemonicParsing="false" text="notebook" onAction="#notebookButtonPressAction"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" onAction="#aboutMenuAction"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="713.0" prefWidth="1110.0">
+         <children>
+            <VBox prefHeight="713.0" prefWidth="120.0">
+               <children>
+                  <AnchorPane prefHeight="713.0" prefWidth="111.0">
+                     <children>
+                        <Button fx:id="newButton" layoutX="6.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="99.0" text="new" onAction="#newButtonPressAction"/>
+                        <Button fx:id="importButton" layoutX="6.0" layoutY="88.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="99.0" text="import" onAction="#importButtonPressAction"/>
+                        <Button fx:id="notebookButton" layoutX="6.0" layoutY="173.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="99.0" text="notebook" onAction="#notebookButtonPressAction"/>
+                        <Button fx:id="exportButton" layoutX="6.0" layoutY="265.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="99.0" text="export" onAction="#exportButtonPressAction"/>
+                        <Button fx:id="searchButton" layoutX="6.0" layoutY="375.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="99.0" text="search" onAction="#searchButtonPressAction"/>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <fx:include fx:id="noteview" source="NoteView.fxml" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
